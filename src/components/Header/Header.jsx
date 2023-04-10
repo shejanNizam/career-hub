@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Header.css";
 
 const Header = () => {
   return (
@@ -26,7 +25,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-semibold"
             >
               <li>
                 <Link to="/"> Home </Link>
@@ -42,12 +41,15 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <Link to="/" className="btn btn-ghost normal-case text-xl">
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case text-3xl font-bold "
+          >
             Job Hunter
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 font-semibold">
             <li>
               <Link to="/"> Home </Link>
             </li>
@@ -63,7 +65,7 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <Link className="btn btn-info text-white">Star Applying</Link>
+          <Link className="btn-primary">Star Applying</Link>
         </div>
       </div>
     </div>
