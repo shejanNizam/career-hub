@@ -34,6 +34,9 @@ const Header = () => {
                 <Link to="/statistics"> Statistics </Link>
               </li>
               <li>
+                <Link to="/feature"> Featured Jobs </Link>
+              </li>
+              <li>
                 <Link to="/applied_jobs"> Applied Jobs </Link>
               </li>
               <li>
@@ -55,6 +58,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/statistics"> Statistics </Link>
+            </li>
+            <li>
+              <Link to="/features"> Featured Jobs </Link>
             </li>
             <li>
               <Link to="/applied_jobs"> Applied Jobs </Link>
