@@ -43,7 +43,7 @@ const CartItem = ({ product }) => {
               </div>
             </div>
             <div className="text-right flex justify-center items-center">
-              <button className="btn-primary">Details</button>
+              <button className="btn-outlined">Details</button>
             </div>
           </div>
         </div>

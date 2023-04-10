@@ -32,7 +32,7 @@ const Card = ({ product, handleAddToCart }) => {
       <Link to={`/feature/${id}`}>
         <button
           onClick={() => handleAddToCart(product)}
-          className="btn-info px-4 py-2 rounded text-white"
+          className="btn-outlined"
         >
           View details
         </button>

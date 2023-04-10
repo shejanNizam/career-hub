@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { toast } from "react-hot-toast";
 import { ProductContext, cartContext } from "../../layout/Main";
 import { addToDb } from "../../utils/fakeDB";
@@ -7,8 +7,13 @@ import Card from "../FeaturedJobs/Card";
 import JobCategoryList from "../JobCategoryList/JobCategoryList";
 
 const Home = () => {
+  const [showAll, setShowAll] = useState(false);
   const products = useContext(ProductContext);
   const [cart, setCart] = useContext(cartContext);
+
+  const handleShowAll = () => {
+    setShowAll(true);
+  };
 
   const handleAddToCart = (product) => {
     let newCart = [];
@@ -34,15 +39,15 @@ const Home = () => {
     <>
       <Banner />
       <JobCategoryList />
-      <div className="text-center mt-16">
+      <div className="text-center mt-16 ">
         <h2 className="font-bold text-4xl"> Featured Jobs </h2>
         <p>
           Explore thousands of job opportunities with all the information you
           need. Its your future
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4 mx-20">
-        {products.map((product) => (
+      <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-4 px-20">
+        {products.slice(0, showAll ? 6 : 4).map((product) => (
           <Card
             key={product.id}
             product={product}
@@ -50,6 +55,11 @@ const Home = () => {
           ></Card>
         ))}
       </div>
+      {!showAll && (
+        <div onClick={handleShowAll} className="text-center my-4">
+          <button className="btn-primary">Show All</button>
+        </div>
+      )}
     </>
   );
 };

@@ -4,7 +4,7 @@ import Blogs from "../../components/Blogs/Blogs";
 import Error from "../../components/Error/Error";
 import CardDetails from "../../components/FeaturedJobs/CardDetails";
 import Home from "../../components/Home/Home";
-import Statistics from "../../components/Statistics/Statistics";
+import { Statistics } from "../../components/Statistics/Statistics";
 import Main from "../../layout/Main";
 import { productsAndCartData } from "../../loaders/getCart&ProductsData";
 
