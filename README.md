@@ -4,7 +4,7 @@ Best Job Hunt platform for beginner to get Full Time / Part Time developement Jo
 
 ## Live Link
 
-Hosted in Netlify -> [JobHunter](https://herogadget.netlify.app/)
+Hosted in Netlify -> [JobHunter](https://job-hunter11.netlify.app/)
 
 ## React Router Dom v6.4
 
