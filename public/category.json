@@ -1,0 +1,26 @@
+[
+    {
+      id: 1,
+      icon: icon1,
+      title: "Account & Finance",
+      available: "300 Jobs Available",
+    },
+    {
+      id: 2,
+      icon: icon2,
+      title: "Creative Design",
+      available: "100+ Jobs Available",
+    },
+    {
+      id: 3,
+      icon: icon3,
+      title: "Marketing & Sales",
+      available: "150 Jobs Available",
+    },
+    {
+      id: 4,
+      icon: icon4,
+      title: "Engineering Job",
+      available: "224 Jobs Available",
+    },
+  ];

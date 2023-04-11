@@ -1,7 +1,7 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-const Card = ({ product, handleAddToCart }) => {
+const Card = ({ product }) => {
+  // console.log(product);
   const {
     id,
     logo,
@@ -11,10 +11,6 @@ const Card = ({ product, handleAddToCart }) => {
     job_duration,
     location,
     salary,
-    job_description,
-    job_responsibility,
-    job_requirements,
-    experience,
   } = product;
   return (
     <div className="border rounded p-8 m-8">
@@ -30,12 +26,7 @@ const Card = ({ product, handleAddToCart }) => {
         <p> Salary: {salary} </p>
       </div>
       <Link to={`/feature/${id}`}>
-        <button
-          onClick={() => handleAddToCart(product)}
-          className="btn-outlined"
-        >
-          View details
-        </button>
+        <button className="btn-outlined">View details</button>
       </Link>
     </div>
   );

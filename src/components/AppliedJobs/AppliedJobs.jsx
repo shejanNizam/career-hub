@@ -5,7 +5,6 @@ import { cartContext } from "../../layout/Main";
 import CartItem from "./CartItem";
 
 const AppliedJobs = () => {
-  // const { initialCart, products } = useLoaderData();
   const [cart, setCart] = useContext(cartContext);
 
   //   Delete Shopping Cart
@@ -18,55 +17,41 @@ const AppliedJobs = () => {
     return toast.error("Cart is empty! 🔥");
   };
 
-  //   Place Order
-  const orderHandler = () => {
-    if (cart.length) {
-      setCart([]);
-      deleteShoppingCart();
-      return toast.success("Order Placed! 👍");
-    }
-    return toast.error("Cart is empty! 🔥");
-  };
-
   return (
     <div className="flex min-h-screen items-start justify-center bg-gray-100 text-gray-900">
       <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 ">
-        <h2 className="text-xl font-semibold">
-          {cart.length ? "Review Cart Items" : "Cart is EMPTY!"}
-        </h2>
+        <div className="flex justify-between items-center">
+          <h2 className="text-xl font-semibold">
+            {cart.length ? "Review Cart Items" : "Cart is EMPTY!"}
+          </h2>
+          <div className="dropdown">
+            <label tabIndex={0} className="btn-outlined m-1">
+              Filter By
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Remote</a>
+              </li>
+              <li>
+                <a>Onsite 2</a>
+              </li>
+            </ul>
+          </div>
+        </div>
         <ul className="flex flex-col divide-y divide-gray-700">
           {cart.map((product) => (
             <CartItem key={product.id} product={product} />
           ))}
         </ul>
         <div className="flex justify-end space-x-4">
-          {cart.length > 0 ? (
-            <>
-              <button
-                type="button"
-                onClick={deleteCartHandler}
-                className="btn-outlined"
-              >
-                Clear <span className="sr-only sm:not-sr-only">Cart</span>
-              </button>
-            </>
-          ) : (
-            <>
-              <Link to="/">
-                <button
-                  type="button"
-                  onClick={deleteCartHandler}
-                  className="btn-outlined"
-                >
-                  Back <span className="sr-only sm:not-sr-only">To Shop</span>
-                </button>
-              </Link>
-            </>
-          )}
-
-          <button onClick={orderHandler} type="button" className="btn-primary">
-            Place Order
-          </button>
+          <Link to="/">
+            <button type="button" className="btn-outlined">
+              Back <span className="sr-only sm:not-sr-only">To Home</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>
