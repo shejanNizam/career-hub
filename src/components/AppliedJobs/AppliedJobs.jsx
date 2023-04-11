@@ -22,7 +22,7 @@ const AppliedJobs = () => {
       <div className="flex flex-col max-w-3xl p-6 space-y-4 sm:p-10 ">
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold">
-            {cart.length ? "Review Cart Items" : "Cart is EMPTY!"}
+            {cart.length ? "Review Applied Jobs" : "Applied Jobs is EMPTY!"}
           </h2>
           <div className="dropdown">
             <label tabIndex={0} className="btn-outlined m-1">
