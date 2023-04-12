@@ -6,7 +6,7 @@ const Banner = () => {
     <div className="grid grid-cols-1 lg:grid-cols-2 bg-slate-100 ">
       <div className="my-4 text-end">
         <h1 className="text-5xl font-bold">
-          One Step <br /> Closer To Your <br />{" "}
+          One Step <br /> Closer To Your <br />
           <span className="active">Dream Job</span>
         </h1>
         <p className="mt-8 mb-8">
@@ -16,7 +16,7 @@ const Banner = () => {
         </p>
         <button className="btn-primary"> Get Started </button>
       </div>
-      <img className="h-96" src={bannerImg} alt="" />
+      <img className="h-96" src={bannerImg} alt="#" />
     </div>
   );
 };

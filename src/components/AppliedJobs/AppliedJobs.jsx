@@ -1,21 +1,10 @@
 import React, { useContext } from "react";
-import { toast } from "react-hot-toast";
 import { Link } from "react-router-dom";
 import { cartContext } from "../../layout/Main";
 import CartItem from "./CartItem";
 
 const AppliedJobs = () => {
   const [cart, setCart] = useContext(cartContext);
-
-  //   Delete Shopping Cart
-  const deleteCartHandler = () => {
-    if (cart.length > 0) {
-      setCart([]);
-      deleteShoppingCart();
-      return toast.error("All Items Removed! 🔥");
-    }
-    return toast.error("Cart is empty! 🔥");
-  };
 
   return (
     <div className="flex min-h-screen items-start justify-center bg-gray-100 text-gray-900">
@@ -36,7 +25,7 @@ const AppliedJobs = () => {
                 <a>Remote</a>
               </li>
               <li>
-                <a>Onsite 2</a>
+                <a>Onsite</a>
               </li>
             </ul>
           </div>

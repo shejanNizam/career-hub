@@ -63,11 +63,16 @@ const CardDetails = () => {
             {job_responsibility}
           </p>
           <p className="my-4">
-            <span className="font-semibold">Educational Requirements:</span>
+            <span className="font-semibold">
+              Educational Requirements: <br />
+            </span>
             {job_requirements}
           </p>
           <p className="my-4">
-            <span className="font-semibold">Experiences:</span> {experience}
+            <span className="font-semibold">
+              Experiences: <br />
+            </span>
+            {experience}
           </p>
         </div>
         <div className=" mx-32 my-16 p-8 rounded-md bg-slate-100">

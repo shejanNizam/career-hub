@@ -18,7 +18,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => productsAndCartData,
+        // loader: () => productsAndCartData,
       },
       {
         path: "statistics",
@@ -31,7 +31,7 @@ const router = createBrowserRouter([
       {
         path: "applied_jobs",
         element: <AppliedJobs />,
-        loader: productsAndCartData,
+        // loader: productsAndCartData,
       },
       {
         path: "blogs",
